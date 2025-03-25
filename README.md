@@ -21,7 +21,7 @@ A brief overview of your project and its purpose. Mention which problem statemen
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
-![Screenshot 1](artifacts/demo/Appstartpage.jpg)
+![Screenshot 1](artifacts/demo/Screenshots/Appstartpage.jpg)
 
 ## 💡 Inspiration
 What inspired you to create this project? Describe the problem you're solving.
