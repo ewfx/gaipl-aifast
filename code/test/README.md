@@ -1,3 +1,3 @@
-## Delete this file
+## Test Results
 
-Instead place your test files here
+- Test results are available in Screenshots folder under path gaipl-aifast/artifacts/demo/ folder 

@@ -2,7 +2,7 @@
 
 ## 📌 Table of Contents
 - [Introduction](#introduction)
-- [Demo](#demo)
+- [Demo](artifacts/demo/README.md)
 - [Inspiration](#inspiration)
 - [What It Does](#what-it-does)
 - [How We Built It](#how-we-built-it)
@@ -21,7 +21,7 @@ A brief overview of your project and its purpose. Mention which problem statemen
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
-![Screenshot 1](link-to-image)
+![Screenshot 1](artifacts/demo/Appstartpage.jpg)
 
 ## 💡 Inspiration
 What inspired you to create this project? Describe the problem you're solving.
