@@ -1,7 +1,8 @@
 #enabling apis
 resource "google_project_service" "project" {
   project  = "mythic-guild-454407-r6"
-  for_each = toset(["bigquery.googleapis.com", "cloudkms.googleapis.com", "aiplatform.googleapis.com", "discoveryengine.googleapis.com", "storage.googleapis.com"])
+  for_each = toset(["bigquery.googleapis.com", "cloudkms.googleapis.com", "aiplatform.googleapis.com", "discoveryengine.googleapis.com", "storage.googleapis.com","run.googleapis.com"])
+
   service  = each.key
 
   timeouts {
@@ -99,10 +100,10 @@ resource "google_discovery_engine_data_store" "test_data_store" {
 
 resource "google_discovery_engine_data_store" "test_data_store_2" {
   location          = google_discovery_engine_data_store.test_data_store.location
-  data_store_id     = "data-store-2"
-  display_name      = "Structured datastore 2"
+  data_store_id     = "data-store-unstr2"
+  display_name      = "UnStructured datastore 2"
   industry_vertical = "GENERIC"
-  content_config    = "NO_CONTENT"
+  content_config    = "CONTENT_REQUIRED"
   solution_types    = ["SOLUTION_TYPE_CHAT"]
 }
 

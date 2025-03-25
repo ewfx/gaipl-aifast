@@ -1,1 +1,2 @@
-Demo video of the appication.
+- Demo video of the AI_FAST application
+

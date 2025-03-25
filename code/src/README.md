@@ -1,3 +1,7 @@
-## Delete this file
+## Infra set up of the AI-FAST App using terraform
 
-Instead place your source files here
+- please run main.tf file in your gcp project by replacing project value with your gcp project
+- Run terraform init
+- Run terraform fmt
+- Run terraform plan
+- Once plan is successful run terraform apply

@@ -1,3 +1,9 @@
-Replace this file with a document that describes the architecture and design of your solution architecture. This may include
-    - An architecture drawing exported into a png/jpeg format image
-    - A document in pdf or md format that describes your solution
+- Architecture Diagram Details
+ - user input is processed from UI via cloud run 
+ - Cloud run passes the input to conversational agent from agent builder app
+ - Agent Builder App processes the input using Gen AI model (gemini-2.0-flash-001)
+ - Agent Builder App contains blended data from both structured datastore and unstructured data store 
+ - These datastore gets data stored in cloud storage bucket and bigquery tables.
+ - Sample data is collected from various sources like jira,confluence,service now knowledge bases,git and formatted to be consumed by Agent Builder
+ - This solution is extensible and can consume various types of data like pdf,csv for FAQ,ppt and docx.
+ - please try the solution by visiting https://hackathon-webui-ipe-960367298527.us-central1.run.app/
