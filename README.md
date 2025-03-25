@@ -17,7 +17,7 @@
 This is a helpful Gemini gen ai llm bot which runs on grounded data coming from multiple sources from integrated enterprise platform and able to provide usuable solutions to the end user. End user will query the data using natural language and output will be in human understable format using RAG(Retrieval Augmentation Generation) behind the scenes
 
 ## 🎥 Demo
-📹 [Video Demo](artifacts/demo/Demovideo/Demo%20Video.mp4)
+📹 [Video Demo](artifacts/demo/DemoVideo/Demo_Video.mp4)
 
 🖼️ [Screenshots](artifacts/demo/Screenshots/)
 ![Screenshot 1](artifacts/demo/Screenshots/Appstartpage.jpg)
