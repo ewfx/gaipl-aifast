@@ -1,7 +1,7 @@
 #enabling apis
 resource "google_project_service" "project" {
   project  = "mythic-guild-454407-r6"
-  for_each = toset(["bigquery.googleapis.com", "cloudkms.googleapis.com", "aiplatform.googleapis.com", "discoveryengine.googleapis.com", "storage.googleapis.com","run.googleapis.com"])
+  for_each = toset(["bigquery.googleapis.com", "cloudkms.googleapis.com", "aiplatform.googleapis.com", "discoveryengine.googleapis.com", "storage.googleapis.com","run.googleapis.com","artifactregistry.googleapis.com"])
 
   service  = each.key
 
@@ -125,4 +125,23 @@ resource "google_discovery_engine_chat_engine" "primary" {
       time_zone             = "America/Los_Angeles"
     }
   }
+}
+
+#artifact registry creation for storing docker image
+resource "google_artifact_registry_repository" "my-repo" {
+  project       = "mythic-guild-454407-r6"
+  location      = "us-central1"
+  repository_id = "dialogflow-messenger-cloudrun"
+  description   = "example docker repository with cmek"
+  format        = "DOCKER"
+  kms_key_name  = google_kms_crypto_key.key.id
+  depends_on = [
+    google_kms_crypto_key_iam_member.crypto_key_ar
+  ]
+}
+
+resource "google_kms_crypto_key_iam_member" "crypto_key_ar" {
+  crypto_key_id = google_kms_crypto_key.key.id
+  role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
+  member        = "serviceAccount:service-${data.google_project.google_project.number}@gcp-sa-artifactregistry.iam.gserviceaccount.com"
 }
