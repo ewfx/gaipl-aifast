@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Dialogflow Chat</title>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            display: flex;
+        }
+        .newSession{
+            position: absolute;
+            right: 50px;
+            top: 15px;
+            /* background-color: #abc5b4; */
+            background-color: #fff;
+            border-radius: 5px;
+            border: none;
+            padding: 5px 10px;
+            color: rgb(33, 33, 33);
+            transition: all 0.5s ease;
+        }
+
+        .newSession:hover {
+            /* border-radius: 20px; */
+            background-color: #f5f5f5;
+            color: rgb(255, 255, 255);
+        }
+
+        .refresh {
+            width: 25px;
+            height: 25px;
+            transition: all 0.5s ease;
+        }
+
+        .newSession:not(:hover) {
+            transform: scale(1);
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: #62b07c;
+        }
+        
+        .chat-container {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Title {
+            font-size: 4.5rem;
+            font-family: 'Google Sans';
+            font-weight: 700;
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #1f1607;
+            margin: auto;
+            text-align: center;
+            background-color: #d8e6dd;
+        }
+        .title-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        df-messenger {
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: 'Google Sans';
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+            --df-messenger-button-color: #0084ff;
+            --df-messenger-chat-padding: 20px;
+            --df-messenger-input-box-color: #fff;
+            --df-messenger-input-placeholder-font-color: #757575;
+            --df-messenger-input-box-border: 1px solid #e0e0e0;
+            width: 100%;
+            height: 100%;
+        }
+        df-messenger-chat {
+            width: 100%;
+            height: 100%;
+            --df-messenger-chat-background:  url("./chat_background.png");
+        }
+    </style>
+</head>
+<body>
+    <div class="Title"> <img class="title-img" src="./android-chrome-512x512.png" alt=""> AI-FAST</div>
+    <div class="chat-container">
+        <df-messenger
+            location="us-central1"
+            project-id="mythic-guild-454407-r6"
+            agent-id="a35af986-2339-46bd-9335-8d6ef901f607"
+            language-code="en">
+            <df-messenger-chat
+                chat-title="AI-FAST"
+                chat-title-icon="./android-chrome-512x512.png"
+                user-actor-image="./user.png"
+                bot-actor-image="./bot.png"
+            ></df-messenger-chat>
+        </df-messenger>
+    </div>
+    <button class="newSession" onclick="createNewSession();">
+        <span>
+            <img class="refresh" src="arrow.png" alt="Refresh">
+        </span>
+    </button>
+
+    <script>
+        function createNewSession() {
+            console.log('Starting new session...');
+            const dfMessenger = document.querySelector('df-messenger');
+            dfMessenger.startNewSession({ retainHistory: false });
+        };
+        document.addEventListener('df-messenger-loaded', function () {
+
+            const dfMessenger = document.querySelector('df-messenger');
+            
+            // Listen for incoming messages
+            dfMessenger.addEventListener('df-response-received', function(event) {
+                console.log('Bot response:', event.detail.response);
+            });
+
+            // Listen for user messages
+            dfMessenger.addEventListener('df-user-input-entered', function(event) {
+                console.log('User input:', event.detail.input);
+            });
+
+            // Handle URL suggestions
+            dfMessenger.addEventListener('df-url-suggested', (event) => {
+                if (Array.isArray(event.detail.suggestedUrls) && 
+                    event.detail.suggestedUrls.length) {
+                    window.location.href = event.detail.suggestedUrls[0];
+                }
+            });
+
+            // Customize initial loading
+            dfMessenger.renderCustomText('Welcome! How can I help you today?');
+        });
+
+        // Error handling
+        window.addEventListener('error', function(e) {
+            console.error('Dialogflow Messenger Error:', e);
+        });
+
+        
+    </script>
+</body>
+</html>
