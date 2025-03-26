@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 AI-FAST Generational Helpbot
 
 ## 📌 Table of Contents
 - [Introduction](#introduction)
@@ -17,6 +17,7 @@
 This is a helpful Gemini gen ai llm bot which runs on grounded data coming from multiple sources from integrated enterprise platform and able to provide usuable solutions to the end user. End user will query the data using natural language and output will be in human understable format using RAG(Retrieval Augmentation Generation) behind the scenes
 
 ## 🎥 Demo
+🔗 [Live Demo](#)(https://hackathon-webui-ipe-960367298527.us-central1.run.app/)  
 📹 [Video Demo](artifacts/demo/DemoVideo/Demo_Video.mp4)
 
 🖼️ [Screenshots](artifacts/demo/Screenshots/)
@@ -41,18 +42,17 @@ Major challenge was the time crunch to build this multi integration set up and m
    ```
 2. Install dependencies  
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   pip install -r requirements.txt (for Python)
    ```
 3. Run the project  
    ```sh
-   npm start  # or python app.py
+   click url of cloud run 
    ```
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Frontend: python
+- 🔹 Backend: dialogflow
+- 🔹 Database: Datastore(vector database)
 
 ## 👥 Team
 - **AI-FAST** - [GitHub](#) | [LinkedIn](#)
