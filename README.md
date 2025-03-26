@@ -14,7 +14,7 @@
 ---
 
 ## 🎯 Introduction
-This is a helpful Gemini gen ai llm bot which runs on grounded data coming from multiple sources from integrated enterprise platform and able to provide usuable solutions to the end user. End user will query the data using natural language and output will be in human understable format using RAG(Retrieval Augmentation Generation) behind the scenes
+This is a helpful Gemini gen ai LLM bot which runs on grounded data coming from multiple sources from integrated enterprise platform and able to provide usable solutions to the end user. End user will query the data using natural language and output will be in human understandsble format using RAG(Retrieval Augmentation Generation) behind the scenes
 
 ## 🎥 Demo
 🔗 [Live Demo](#)(https://hackathon-webui-ipe-960367298527.us-central1.run.app/)  
@@ -50,14 +50,14 @@ Major challenge was the time crunch to build this multi integration set up and m
    ```
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: python
-- 🔹 Backend: dialogflow
+- 🔹 Frontend: HTML
+- 🔹 Backend: Dialogflow
 - 🔹 Database: Datastore(vector database)
 
 ## 👥 Team
 - **AI-FAST** - [GitHub](https://github.com/ewfx/gaipl-aifast/)
-- **Teammate 1** - [GitHub](https://github.com/anilmm2005)
-- **Teammate 2** - [GitHub](https://github.com/HarshaBhogi)
-- **Teammate 3** - [GitHub](https://github.com/Vijay2869)
-- **Teammate 4** - [GitHub](https://github.com/rabollam)
-- **Teammate 5** - [GitHub](#)
+- **Anil Manohar Mohapatra** - [GitHub](https://github.com/anilmm2005)
+- **Harsha Vardhan Bhogi** - [GitHub](https://github.com/HarshaBhogi)
+- **Vijay Maruthi Lagishetti** - [GitHub](https://github.com/Vijay2869)
+- **Ravikiran Bollam** - [GitHub](https://github.com/rabollam)
+- **Kuldeep Rana** - [GitHub](https://github.com/Ranagcp)
