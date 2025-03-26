@@ -40,9 +40,10 @@ Major challenge was the time crunch to build this multi integration set up and m
    ```sh
    git clone https://github.com/ewfx/gaipl-aifast.git
    ```
-2. Deploy infrastruture   
-   ```sh
+2. Deploy infrastruture
    Install open source terraform (how to install)[https://developer.hashicorp.com/terraform/install]
+   ```sh
+   
    Navigate to source code in Git repository
    cd code/src
    Update file `main.tf` with GCP project name in line #3
@@ -52,10 +53,10 @@ Major challenge was the time crunch to build this multi integration set up and m
    terraform plan
    terraform apply
    ```
-3. Application setup  
-   ```sh
+4. Application setup  
+   
    Refer to [Application setup](https://github.com/ewfx/gaipl-aifast/blob/main/code/src/README.md#application-setup)
-   ```
+   
 
 ## 🏗️ Tech Stack
 - 🔹 Frontend: HTML
