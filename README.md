@@ -24,7 +24,7 @@ This is a helpful Gemini gen ai LLM bot which runs on grounded data coming from 
 ![Screenshot 1](artifacts/demo/Screenshots/Appstartpage.jpg)
 
 ## 💡 Inspiration
-Organizations have tons of data lying scattered acros different systems. Idea here is to organize it and provide a neat interface to the end user who can use natural language to find multitude of solutions which were hitherto unexplored
+Organizations have tons of data lying scattered across different systems. Idea here is to organize it and provide a neat interface to the end user who can use natural language to find multitude of solutions which were hitherto unexplored
 
 ## ⚙️ What It Does
 It provides a interface to the user to query through issues in natural language and find matching ones in lightning quick time
@@ -53,6 +53,9 @@ Major challenge was the time crunch to build this multi integration set up and m
 - 🔹 Frontend: HTML
 - 🔹 Backend: Dialogflow
 - 🔹 Database: Datastore(vector database)
+- 🔹 Compute: Cloud Run
+- 🔹 Hosted in : Google cloud platform
+- 🔹 Terraform
 
 ## 👥 Team
 - **AI-FAST** - [GitHub](https://github.com/ewfx/gaipl-aifast/)
