@@ -55,5 +55,9 @@ Major challenge was the time crunch to build this multi integration set up and m
 - 🔹 Database: Datastore(vector database)
 
 ## 👥 Team
-- **AI-FAST** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+- **AI-FAST** - [GitHub](https://github.com/ewfx/gaipl-aifast/)
+- **Teammate 1** - [GitHub](https://github.com/anilmm2005)
+- **Teammate 2** - [GitHub](https://github.com/HarshaBhogi)
+- **Teammate 3** - [GitHub](https://github.com/Vijay2869)
+- **Teammate 4** - [GitHub](https://github.com/rabollam)
+- **Teammate 5** - [GitHub](#)
