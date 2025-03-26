@@ -6,10 +6,6 @@
 - Run terraform plan
 - Once plan is successful run terraform apply
 
-  # Dialogflow Messenger on Cloud Run
-
-This project deploys a Dialogflow Messenger chatbot as a static web page using Google Cloud Run.
-
 
 ## Application Setup
 
