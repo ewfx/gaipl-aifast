@@ -1,6 +1,6 @@
-## Infra set up of the AI-FAST App using terraform
+## Infra Setup
 
-- please run main.tf file in your gcp project by replacing project value with your gcp project
+- please run main.tf file present in infra folder in your gcp project by replacing all values with your values 
 - Run terraform init
 - Run terraform fmt
 - Run terraform plan

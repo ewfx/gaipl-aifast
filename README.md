@@ -30,7 +30,7 @@ Organizations have tons of data lying scattered across different systems. Idea h
 It provides a interface to the user to query through issues in natural language and find matching ones in lightning quick time
 
 ## 🛠️ How We Built It
-We have used all tools from GCP - namely Agent Builder Agent.Datastore,Cloud Run,Cloud storage bucket,artifact registry,Bigquery and Gemini as LLM. terraform was used for building the infra set up and gcloud/python was used for building application front end.
+We have used all tools from GCP(Google Cloud Platform) - namely Agent Builder Agent.Datastore,Cloud Run,Cloud storage bucket,artifact registry,Bigquery and Gemini as LLM. Terraform was used for building the infra set up and gcloud/python was used for building application front end.
 
 ## 🚧 Challenges We Faced
 Major challenge was the time crunch to build this multi integration set up and making sure it works together. Another issue was in getting usable data. Ingestion of the data caused some challeneges but it was overcome a lot using gen ai itself .
@@ -42,19 +42,10 @@ Major challenge was the time crunch to build this multi integration set up and m
    ```
 2. Deploy infrastruture
    Install open source terraform (how to install)[https://developer.hashicorp.com/terraform/install]
-   ```sh
    
-   Navigate to source code in Git repository
-   cd code/src
-   Update file `main.tf` with GCP project name in line #3
-   Run following commands
-   terraform init
-   terraform validate
-   terraform plan
-   terraform apply
-   ```
+   Refer to [Infra setup](https://github.com/ewfx/gaipl-aifast/blob/main/code/src/README.md#infra-setup)
+
 4. Application setup  
-   
    Refer to [Application setup](https://github.com/ewfx/gaipl-aifast/blob/main/code/src/README.md#application-setup)
    
 
@@ -63,8 +54,8 @@ Major challenge was the time crunch to build this multi integration set up and m
 - 🔹 Backend: Dialogflow
 - 🔹 Database: Datastore(vector database)
 - 🔹 Compute: Cloud Run
-- 🔹 Hosted in : Google cloud platform
-- 🔹 Terraform
+- 🔹 Hosted On : Google cloud platform
+- 🔹 Infra as Code: Terraform
 
 ## 👥 Team
 - **AI-FAST** - [GitHub](https://github.com/ewfx/gaipl-aifast/)

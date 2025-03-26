@@ -145,3 +145,23 @@ resource "google_kms_crypto_key_iam_member" "crypto_key_ar" {
   role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
   member        = "serviceAccount:service-${data.google_project.google_project.number}@gcp-sa-artifactregistry.iam.gserviceaccount.com"
 }
+
+#creation of cloud run to serve ui
+resource "google_cloud_run_service" "cloudrun" {
+  project  = "mythic-guild-454407-r6"
+  name     = "hackathon-webui-ipe"
+  location = "us-central1"
+
+  template {
+    spec {
+      containers {
+        image = "gcr.io/mythic-guild-454407-r6/dialogflow-messenger-cloudrun"
+      }
+    }
+  }
+
+  traffic {
+    percent         = 100
+    latest_revision = true
+  }
+}
